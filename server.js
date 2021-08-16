@@ -1,8 +1,15 @@
 // Default import of express module without Webpack
 const express = require("express");
+const connectDB = require("./config/db");
 
 // Initialize express application
 const app = express();
+
+// Connect Database
+connectDB();
+
+// Init Middleware
+app.use(express.json({ extended: false }));
 
 // GET
 app.get("/", (req, res) => {
