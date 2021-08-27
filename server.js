@@ -12,12 +12,13 @@ connectDB();
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-// GET
-app.get("/", (req, res) => {
-  // res.send(smth)
-  // res.sendFile(some_file)
-  res.json({ msg: "Welcome to the Contact Keeper API" });
-});
+// Deploy didn't work at first because of this
+// // GET
+// app.get("/", (req, res) => {
+//   // res.send(smth)
+//   // res.sendFile(some_file)
+//   res.json({ msg: "Welcome to the Contact Keeper API" });
+// });
 
 // Define routes
 app.use("/api/users", require("./routes/users"));
