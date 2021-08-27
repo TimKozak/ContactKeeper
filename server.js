@@ -12,7 +12,7 @@ connectDB();
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-// Deploy didn't work at first because of this
+// // Deploy didn't work at first because of this initial route
 // // GET
 // app.get("/", (req, res) => {
 //   // res.send(smth)
